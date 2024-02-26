@@ -41,6 +41,9 @@ text-edit.workspace = true
 # ide should depend only on the top-level `hir` package. if you need
 # something from some `hir-xxx` subpackage, reexport the API via `hir`.
 hir.workspace = true
+serde = { version = "1.0.156", features = ["derive"] }
+serde_json = "1.0.97"
+lazy_static = "1.4.0"
 
 [target.'cfg(not(any(target_arch = "wasm32", target_os = "emscripten")))'.dependencies]
 toolchain.workspace = true
